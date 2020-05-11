@@ -1,6 +1,6 @@
 import discord
 import openpyxl
-
+import os
 
 clinet = discord.Client()
 
@@ -80,5 +80,6 @@ async def on_message(message):
             i += 1
 
 
-clinet.run("NzA5MDk0NDY2NTk3NjgzMzEw.Xrlisw.rNxqK9uuTYJg_bCpJTVY7yNo1As")
+access_token = os.environ["BOT_TOKEN"]            
+clinet.run(access_token)
 
